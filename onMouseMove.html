@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Mouse Move</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+    <style>
+
+    </style>
+</head>
+<body class="bg-green-500">
+<div id="gezenalan"><img src="BesiktasJK-Logo.svg.png" width="50" height="29" style="border:none"></div>
+<div class="w-full h-12 fixed left-0 bottom-0 bg-green-700 flex align-center justify-around" >
+    <div class="flex items-center justify-around">
+        <a href="https://github.com/Tarikkkoc">
+            <img src="https://icon-library.com/images/github-icon-png/github-icon-png-5.jpg" alt="github" width="30" height="30">
+        </a>
+        <a href="https://www.linkedin.com/in/ahmet-tarık-koç-3b952a193/">
+            <img src="https://icon-library.com/images/linkedin-icon-png-black/linkedin-icon-png-black-12.jpg" alt="linkedin" width="30" height="30">
+        </a>
+        <a href="mailto:ahmettarikkoc@gmail.com">
+            <img src="https://icon-library.com/images/mail-icon-black-and-white/mail-icon-black-and-white-0.jpg" alt="e-mail" width="27" height="30">
+        </a>
+        <a href="https://www.instagram.com/ahmet_tarik/">
+            <img src="https://icon-library.com/images/instagram-icon-logo/instagram-icon-logo-29.jpg" alt="instagram" width="35" height="30">
+        </a>
+        
+    </div>
+</div>  
+<script> 
+/*
+mouse'u takip eden logo
+*/
+var alan = document.getElementById("gezenalan");
+alan.style.position = "absolute"; // absolute : gezebilir alan
+window.onmousemove = function(e){ // foknsiyonumun parametresi olay olduğu için 18 ve 19. satırlarda tanımlanan event
+    alan.style.left = e.clientX + "px"
+    alan.style.top = e.clientY + "px";
+}
+
+</script> 
+</body>
+</html>
